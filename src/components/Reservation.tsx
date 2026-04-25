@@ -1,6 +1,6 @@
 'use client'
-import { Calendar } from "@/ui/Calendar";
-import { Summary } from "@/ui/Summary";
+import { Calendar } from "@/components/ui/Calendar";
+import { Summary } from "@/components/ui/Summary";
 import { useState } from "react";
 
 export function Reservation(){
