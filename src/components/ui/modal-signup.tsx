@@ -52,12 +52,16 @@ export function ModalSignup({ onClose, onSwitchToSignin }: ModalSignupProps) {
     }, [onClose]);
 
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div
+            className="fixed inset-0 z-50 flex items-center justify-center p-4"
+            style={{ position: "fixed", inset: 0, zIndex: 9999, padding: "1rem" }}
+        >
             <button
                 type="button"
                 aria-label="Cerrar modal"
                 onClick={onClose}
                 className="absolute inset-0 bg-black/60"
+                style={{ position: "fixed", inset: 0 }}
             />
 
             <section
@@ -67,6 +71,7 @@ export function ModalSignup({ onClose, onSwitchToSignin }: ModalSignupProps) {
                 aria-labelledby="signup-title"
                 aria-describedby="signup-description"
                 className="relative z-10 w-full max-w-lg rounded-xl border border-zinc-200 bg-white p-6 shadow-2xl"
+                style={{ width: "min(100%, 32rem)" }}
             >
                 <h2 id="signup-title" className="text-xl font-semibold text-zinc-900">Crea una cuenta</h2>
                 <p id="signup-description" className="mt-1 text-sm text-zinc-600">Necesitas una cuenta para comprar tu reserva.</p>

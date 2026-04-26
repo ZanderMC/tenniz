@@ -52,12 +52,16 @@ export function ModalSignin({ onClose, onSwitchToSignup }: ModalSigninProps) {
     }, [onClose]);
 
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div
+            className="fixed inset-0 z-50 flex items-center justify-center p-4"
+            style={{ position: "fixed", inset: 0, zIndex: 9999, padding: "1rem" }}
+        >
             <button
                 type="button"
                 aria-label="Cerrar modal"
                 onClick={onClose}
                 className="absolute inset-0 bg-black/60"
+                style={{ position: "fixed", inset: 0 }}
             />
 
             <section
@@ -67,11 +71,12 @@ export function ModalSignin({ onClose, onSwitchToSignup }: ModalSigninProps) {
                 aria-labelledby="signin-title"
                 aria-describedby="signin-description"
                 className="relative z-10 w-full max-w-md rounded-xl border border-zinc-200 bg-white p-6 shadow-2xl"
+                style={{ width: "min(100%, 28rem)" }}
             >
                 <h2 id="signin-title" className="text-xl font-semibold text-zinc-900">Inicia sesion</h2>
                 <p id="signin-description" className="mt-1 text-sm text-zinc-600">Inicia sesion para comprar tu reserva.</p>
 
-                <form className="mt-5 space-y-3" /*</section>action={LoginEmail}*/>
+                <form className="mt-5 space-y-3" /*action={LoginEmail}*/>
                     <label htmlFor="signin-email" className="block text-sm font-medium text-zinc-800">Email</label>
                     <input
                         ref={firstInputRef}
