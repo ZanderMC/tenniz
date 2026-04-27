@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from "react";
-// import { registerEmail } from "../../../server/auth-action";
+ import { registerEmail } from "../../../server/auth-action";
 
 type ModalSignupProps = {
     onClose: () => void;
@@ -76,7 +76,7 @@ export function ModalSignup({ onClose, onSwitchToSignin }: ModalSignupProps) {
                 <h2 id="signup-title" className="text-xl font-semibold text-zinc-900">Crea una cuenta</h2>
                 <p id="signup-description" className="mt-1 text-sm text-zinc-600">Necesitas una cuenta para comprar tu reserva.</p>
 
-                <form className="mt-5 space-y-3" /*action={registerEmail}*/>
+                <form className="mt-5 space-y-3" action={registerEmail}>
                     <label htmlFor="signup-name" className="block text-sm font-medium text-zinc-800">Nombre</label>
                     <input
                         ref={firstInputRef}

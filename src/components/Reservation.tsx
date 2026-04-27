@@ -12,22 +12,22 @@ export function Reservation(){
     const [selectedSlots, setSelectedSlots] = useState<string[]>([])
     return(
         <section className="bg-red-200 h-screen w-full flex flex-row items-start justify-center gap-10 p-10 ">
-      <Calendar
-                    selectedDate={ selectedDate}
-                    selectedSlots={selectedSlots}
-                    courtName={"wa"}
-                    onSelectedDateChange={setSelectedDate}
-                    onSelectedSlotsChange={setSelectedSlots}
-                />
-     <Summary  selectedDate={ selectedDate}
-                    selectedSlots={selectedSlots}
-                    courtName={"wa"}
-                    slotPrice={10}
-                    onClear={() => {
-                        setSelectedDate(null);
-                        setSelectedSlots([]);
-                    }}
-                />
+                <Calendar
+                                selectedDate={ selectedDate}
+                                selectedSlots={selectedSlots}
+                                courtName={"wa"}
+                                onSelectedDateChange={setSelectedDate}
+                                onSelectedSlotsChange={setSelectedSlots}
+                            />
+                <Summary  selectedDate={ selectedDate}
+                                selectedSlots={selectedSlots}
+                                courtName={"wa"}
+                                slotPrice={10}
+                                onClear={() => {
+                                    setSelectedDate(null);
+                                    setSelectedSlots([]);
+                                }}
+                            />
         </section>
     )
 }
