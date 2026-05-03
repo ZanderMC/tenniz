@@ -8,9 +8,11 @@
     "start": "next start"
   },
   "dependencies": {
+    "@mercadopago/sdk-react": "^1.0.7",
     "@prisma/adapter-pg": "^7.8.0",
     "@prisma/client": "^7.8.0",
     "better-auth": "^1.6.9",
+    "mercadopago": "^2.12.0",
     "next": "16.1.6",
     "pg": "^8.20.0",
     "react": "19.2.3",
